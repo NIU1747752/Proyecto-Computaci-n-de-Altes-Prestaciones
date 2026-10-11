@@ -73,7 +73,7 @@ void forward_prop() {
         if (debug == 1) printf("Valors activació capa %d \n", i);
         int j,k;
         //#pragma omp parallel for private(j, k) 
-        #pragma omp parallel for private(j, k) //shared(lay, num_neurons, num_layers)
+        #pragma omp parallel for private(j, k) if(num_neurons[i] > 100)//shared(lay, num_neurons, num_layers) FALTA COMENTAR EL PORQUE DEL IF EN EL WORD
         for (int j = 0; j < num_neurons[i]; j++) {
             lay[i].z[j] = lay[i].bias[j];
             //#pragma omp parallel for reduction(+:sum_local)
@@ -108,6 +108,7 @@ void forward_prop() {
 float compute_loss(int i) {
     double tmpcost = 0, p;
 
+    //#pragma omp parallel for reduction(+:tmpcost) private(p)
     for (int j = 0; j < num_neurons[num_layers - 1]; j++) {
         p = lay[num_layers - 1].actv[j];
         if (lay[num_layers - 1].actv[j] < EPSILON) p = EPSILON;
@@ -151,7 +152,7 @@ void back_prop(int p) {
     }
 
     for (int j = 0; j < num_neurons[num_layers - 1]; j++) {
-        #pragma omp parallel for
+        //#pragma omp parallel for FALTA EXPLICAR PORQUE AL FINAL CONVIENE NO PONER ESTO EN EL WORD
         for (int k = 0; k < num_neurons[num_layers - 2]; k++) {
             lay[num_layers - 2].dw[j * num_neurons[num_layers - 2] + k] +=
                 (lay[num_layers - 1].dz[j] * lay[num_layers - 2].actv[k]);

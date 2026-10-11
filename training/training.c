@@ -69,9 +69,15 @@ void init_deltas() {
 void forward_prop() {
     for (int i = 1; i < num_layers; i++) {
         if (debug == 1) printf("Valors activació capa %d \n", i);
+        int j,k;
+        //#pragma omp parallel for private(j, k) 
+        #pragma omp parallel for private(j, k) //shared(lay, num_neurons, num_layers)
         for (int j = 0; j < num_neurons[i]; j++) {
             lay[i].z[j] = lay[i].bias[j];
+            //#pragma omp parallel for reduction(+:sum_local)
+            //#pragma omp parallel for
             for (int k = 0; k < num_neurons[i - 1]; k++)
+                //#pragma omp atomic
                 lay[i].z[j] +=
                     ((lay[i - 1].out_weights[j * num_neurons[i - 1] + k]) *
                      (lay[i - 1].actv[k]));

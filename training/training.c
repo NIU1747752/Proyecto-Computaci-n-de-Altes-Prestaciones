@@ -40,8 +40,10 @@ void feed_input(int i) {
  **/
 void init_deltas() {
     for (int i = 0; i < num_layers - 1; i++) {
+        #pragma omp parallel for
         for (int j = 0; j < num_neurons[i]; j++) 
             lay[i].dbias[j] = 0.0;
+        #pragma omp parallel for
         for (int j = 0; j < num_neurons[i + 1] * num_neurons[i]; j++) 
             lay[i].dw[j] = 0.0;
     }
@@ -149,6 +151,7 @@ void back_prop(int p) {
     }
 
     for (int j = 0; j < num_neurons[num_layers - 1]; j++) {
+        #pragma omp parallel for
         for (int k = 0; k < num_neurons[num_layers - 2]; k++) {
             lay[num_layers - 2].dw[j * num_neurons[num_layers - 2] + k] +=
                 (lay[num_layers - 1].dz[j] * lay[num_layers - 2].actv[k]);
@@ -163,7 +166,7 @@ void back_prop(int p) {
         if ( i > 1 )
             for (int k = 0; k < num_neurons[i - 1]; k++)
                 lay[i - 1].dactv[k] = 0;
-
+        #pragma omp parallel for
         for (int j = 0; j < num_neurons[i]; j++) {
             lay[i].dz[j] = (lay[i].z[j] >= 0) ? lay[i].dactv[j] : 0;
 
@@ -172,6 +175,7 @@ void back_prop(int p) {
                     lay[i].dz[j] * lay[i - 1].actv[k];
 
                 if (i > 1)
+                    //#pragma omp atomic
                     lay[i - 1].dactv[k] +=
                         lay[i - 1].out_weights[j * num_neurons[i - 1] + k] *
                         lay[i].dz[j];
@@ -190,12 +194,13 @@ void back_prop(int p) {
  */
 void update_weights(void) {
     for (int i = 0; i < num_layers - 1; i++) {
+        #pragma omp parallel for collapse(2)
         for (int j = 0; j < num_neurons[i + 1]; j++)
             for (int k = 0; k < num_neurons[i]; k++)  // Update Weights
                 lay[i].out_weights[j * num_neurons[i] + k] =
                     (lay[i].out_weights[j * num_neurons[i] + k]) -
                     (alpha * lay[i].dw[j * num_neurons[i] + k]);
-
+        #pragma omp parallel for
         for (int j = 0; j < num_neurons[i]; j++)  // Update Bias
             lay[i].bias[j] = lay[i].bias[j] - (alpha * lay[i].dbias[j]);
     }

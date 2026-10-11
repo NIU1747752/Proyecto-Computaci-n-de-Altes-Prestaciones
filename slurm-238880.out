@@ -1,9 +1,0 @@
-training/training.c: In function ‘forward_prop’:
-training/training.c:74:42: error: ‘j’ undeclared (first use in this function)
-   74 |         #pragma omp parallel for private(j, k) shared(lay, num_neurons, num_layers)
-      |                                          ^
-training/training.c:74:42: note: each undeclared identifier is reported only once for each function it appears in
-training/training.c:74:45: error: ‘k’ undeclared (first use in this function)
-   74 |         #pragma omp parallel for private(j, k) shared(lay, num_neurons, num_layers)
-      |                                             ^
-slurmstepd: error: *** JOB 238880 ON clus09 CANCELLED AT 2026-10-11T11:25:10 ***

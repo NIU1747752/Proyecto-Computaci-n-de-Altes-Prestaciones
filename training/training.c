@@ -73,7 +73,7 @@ void forward_prop() {
         if (debug == 1) printf("Valors activació capa %d \n", i);
         int j,k;
         //#pragma omp parallel for private(j, k) 
-        #pragma omp parallel for private(j, k) if(num_neurons[i] > 100)//shared(lay, num_neurons, num_layers) FALTA COMENTAR EL PORQUE DEL IF EN EL WORD
+        #pragma omp parallel for //if (num_neurons>50) //shared(lay, num_neurons, num_layers) FALTA COMENTAR EL PORQUE DEL IF EN EL WORD
         for (int j = 0; j < num_neurons[i]; j++) {
             lay[i].z[j] = lay[i].bias[j];
             //#pragma omp parallel for reduction(+:sum_local)
@@ -92,6 +92,7 @@ void forward_prop() {
         if (debug == 1) printf("\n\n");
     }
 }
+
 
 /** 
  * @brief Calcula la funció de perdua per cada patró i l'acumulat fins el punt actual 
@@ -152,7 +153,7 @@ void back_prop(int p) {
     }
 
     for (int j = 0; j < num_neurons[num_layers - 1]; j++) {
-        //#pragma omp parallel for FALTA EXPLICAR PORQUE AL FINAL CONVIENE NO PONER ESTO EN EL WORD
+        //#pragma omp parallel for FALTA EXPLICAR PORQUE AL FINAL CONVIENE NO PONER ESTO EN EL
         for (int k = 0; k < num_neurons[num_layers - 2]; k++) {
             lay[num_layers - 2].dw[j * num_neurons[num_layers - 2] + k] +=
                 (lay[num_layers - 1].dz[j] * lay[num_layers - 2].actv[k]);
@@ -167,7 +168,12 @@ void back_prop(int p) {
         if ( i > 1 )
             for (int k = 0; k < num_neurons[i - 1]; k++)
                 lay[i - 1].dactv[k] = 0;
-        #pragma omp parallel for
+        float dactv_2[num_neurons[i-1]];
+        for (int k=0;k<num_neurons[i-1];k++){
+            dactv_2[k]=0;
+        }
+        //float *dactv = lay[i-1].dactv;
+        #pragma omp parallel for reduction (+:dactv_2)
         for (int j = 0; j < num_neurons[i]; j++) {
             lay[i].dz[j] = (lay[i].z[j] >= 0) ? lay[i].dactv[j] : 0;
 
@@ -177,11 +183,16 @@ void back_prop(int p) {
 
                 if (i > 1)
                     //#pragma omp atomic
-                    lay[i - 1].dactv[k] +=
+                    dactv_2[k] +=
                         lay[i - 1].out_weights[j * num_neurons[i - 1] + k] *
                         lay[i].dz[j];
             }
             lay[i].dbias[j] += lay[i].dz[j];
+        }
+        if(i>1){
+            for (int k=0; k<num_neurons[i-1];k++){
+                lay[i-1].dactv[k]=dactv_2[k];
+            }
         }
     }
 }

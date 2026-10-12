@@ -1,0 +1,20 @@
+
+Training...
+Epoch 0 Loss: 5.893934
+Epoch 1 Loss: 6.104228
+Epoch 2 Loss: 6.100656
+Epoch 3 Loss: 6.104228
+Epoch 4 Loss: 6.104228
+Epoch 5 Loss: 6.104228
+Epoch 6 Loss: 6.111372
+Epoch 7 Loss: 6.097084
+Epoch 8 Loss: 6.097084
+Epoch 9 Loss: 6.097084
+
+Testing...
+
+Total encerts = 92 (/946) 
+
+
+Goodbye! (20.383268 sec)
+

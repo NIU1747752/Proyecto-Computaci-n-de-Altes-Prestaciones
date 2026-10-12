@@ -1,0 +1,29 @@
+training/training.c: In function ‘back_prop’:
+training/training.c:190:44: error: expected ‘]’ before ‘;’ token
+  190 |             for (int k=0; k<num_neurons[i-1;k++]){
+      |                                            ^
+      |                                            ]
+training/training.c:190:49: error: expected ‘;’ before ‘)’ token
+  190 |             for (int k=0; k<num_neurons[i-1;k++]){
+      |                                                 ^
+      |                                                 ;
+
+Training...
+Epoch 0 Loss: 0.363910
+Epoch 1 Loss: 0.340214
+Epoch 2 Loss: 0.199676
+Epoch 3 Loss: 0.063911
+Epoch 4 Loss: 0.040759
+Epoch 5 Loss: 0.026454
+Epoch 6 Loss: 0.021878
+Epoch 7 Loss: 0.016358
+Epoch 8 Loss: 0.012389
+Epoch 9 Loss: 0.010455
+
+Testing...
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (5.840321 sec)
+

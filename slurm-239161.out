@@ -1,0 +1,24 @@
+training/training.c: In function ‘forward_prop’:
+training/training.c:76:63: warning: comparison between pointer and integer
+   76 |         #pragma omp parallel for private(j, k) if (num_neurons>50) //shared(lay, num_neurons, num_layers) FALTA COMENTAR EL PORQUE DEL IF EN EL WORD
+      |                                                               ^
+
+Training...
+Epoch 0 Loss: 0.364049
+Epoch 1 Loss: 0.314524
+Epoch 2 Loss: 0.133732
+Epoch 3 Loss: 0.064680
+Epoch 4 Loss: 0.040316
+Epoch 5 Loss: 0.026090
+Epoch 6 Loss: 0.021138
+Epoch 7 Loss: 0.016850
+Epoch 8 Loss: 0.013009
+Epoch 9 Loss: 0.011232
+
+Testing...
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (5.630157 sec)
+

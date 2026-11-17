@@ -18,6 +18,7 @@
  */
 
 #include "main.h"
+#include <mpi.h>
 
 #include <fcntl.h>
 #include <limits.h>
@@ -25,6 +26,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
+#include <omp.h>
 
 //-----------FREE INPUT------------
 void freeInput(int np, char** input) {
@@ -71,6 +73,9 @@ void printRecognized(int p, layer Output) {
  */
 void train_neural_net() {
     printf("\nTraining...\n");
+    int rank,size;
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    MPI_Comm_rank(MPI_COMM_WORLD,&rank);
 
     if ((input = loadPatternSet(num_training_patterns, dataset_training_path,
                                 1)) == NULL) {
@@ -94,16 +99,25 @@ void train_neural_net() {
             ranpat[p] = ranpat[np];
             ranpat[np] = op;
         }
-
+        int numero_total= batch_size/size;
         for (int nb = 0; nb < num_training_patterns/batch_size; nb++) {
             init_deltas();
-            for (int i = nb*batch_size; i < (nb+1)*batch_size; i++) {
+            int inicio = nb*batch_size + numero_total*rank;
+            int fin = nb*batch_size + numero_total*(rank+1);
+            if (rank == size - 1) fin = (nb+1)*batch_size;  
+            for (int i = inicio; i < fin; i++) {
                 int p = ranpat[i];
 
                 feed_input(p);
                 forward_prop();
                 loss += compute_loss(p);
                 back_prop(p);
+            }
+
+            for(int j=0;j<num_layers-1;j++){
+                MPI_Allreduce(MPI_IN_PLACE, lay[j].dw,num_neurons[j+1]*num_neurons[j],MPI_FLOAT,MPI_SUM,MPI_COMM_WORLD);
+                MPI_Allreduce(MPI_IN_PLACE, lay[j].dbias,num_neurons[j],MPI_FLOAT,MPI_SUM,MPI_COMM_WORLD);
+
             }
             update_weights();
         }
@@ -140,6 +154,8 @@ void test_nn() {
 
 //-----------MAIN-----------//
 int main(int argc, char** argv) {
+    //omp_set_max_active_levels(2);
+    MPI_Init(&argc, &argv);
     if (debug == 1)
         printf("argc = %d \n", argc);
     if (argc <= 1)
@@ -174,5 +190,6 @@ int main(int argc, char** argv) {
 
     printf("\n\nGoodbye! (%f sec)\n\n", elapsed);
 
+    MPI_Finalize();
     return 0;
 }

@@ -1,0 +1,138 @@
+--------------
+1 procesos
+--------------
+
+Training...
+Epoch 0 Loss: 0.363908
+Epoch 1 Loss: 0.357409
+Epoch 2 Loss: 0.147380
+Epoch 3 Loss: 0.061898
+Epoch 4 Loss: 0.039837
+Epoch 5 Loss: 0.026030
+Epoch 6 Loss: 0.022047
+Epoch 7 Loss: 0.016594
+Epoch 8 Loss: 0.012993
+Epoch 9 Loss: 0.011011
+
+Testing...
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (12.081426 sec)
+
+--------------
+2 procesos
+--------------
+
+Training...
+Epoch 0 Loss: 0.364023
+Epoch 1 Loss: 0.307042
+Epoch 2 Loss: 0.149348
+Epoch 3 Loss: 0.070347
+Epoch 4 Loss: 0.045166
+Epoch 5 Loss: 0.026739
+Epoch 6 Loss: 0.021797
+Epoch 7 Loss: 0.016355
+Epoch 8 Loss: 0.012581
+Epoch 9 Loss: 0.010959
+
+Testing...
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (6.492002 sec)
+
+--------------
+4 procesos
+--------------
+
+Training...
+Epoch 0 Loss: 0.364013
+Epoch 1 Loss: 0.302084
+Epoch 2 Loss: 0.156609
+Epoch 3 Loss: 0.062715
+Epoch 4 Loss: 0.041576
+Epoch 5 Loss: 0.026356
+Epoch 6 Loss: 0.022595
+Epoch 7 Loss: 0.016659
+Epoch 8 Loss: 0.012402
+Epoch 9 Loss: 0.010725
+
+Testing...
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (4.305412 sec)
+
+--------------
+6 procesos
+--------------
+
+Training...
+Epoch 0 Loss: 0.363883
+Epoch 1 Loss: 0.354009
+Epoch 2 Loss: 0.164875
+Epoch 3 Loss: 0.061602
+Epoch 4 Loss: 0.042388
+Epoch 5 Loss: 0.026231
+Epoch 6 Loss: 0.022793
+Epoch 7 Loss: 0.016580
+Epoch 8 Loss: 0.013284
+Epoch 9 Loss: 0.011107
+
+Testing...
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.627188 sec)
+
+--------------
+8 procesos
+--------------
+
+Training...
+Epoch 0 Loss: 0.364004
+Epoch 1 Loss: 0.304721
+Epoch 2 Loss: 0.138518
+Epoch 3 Loss: 0.086767
+Epoch 4 Loss: 0.046614
+Epoch 5 Loss: 0.028048
+Epoch 6 Loss: 0.023268
+Epoch 7 Loss: 0.016631
+Epoch 8 Loss: 0.012542
+Epoch 9 Loss: 0.010751
+
+Testing...
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (3.377688 sec)
+
+--------------
+12 procesos
+--------------
+
+Training...
+Epoch 0 Loss: 0.363910
+Epoch 1 Loss: 0.356179
+Epoch 2 Loss: 0.164672
+Epoch 3 Loss: 0.064935
+Epoch 4 Loss: 0.041951
+Epoch 5 Loss: 0.026099
+Epoch 6 Loss: 0.021954
+Epoch 7 Loss: 0.016928
+Epoch 8 Loss: 0.013246
+Epoch 9 Loss: 0.011183
+
+Testing...
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (4.975820 sec)
+

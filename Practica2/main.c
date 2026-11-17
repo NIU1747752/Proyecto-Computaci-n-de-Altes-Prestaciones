@@ -28,6 +28,8 @@
 #include <sys/time.h>
 #include <omp.h>
 
+int rank,size;
+
 //-----------FREE INPUT------------
 void freeInput(int np, char** input) {
     for (int i = 0; i < np; i++)
@@ -72,10 +74,7 @@ void printRecognized(int p, layer Output) {
  *
  */
 void train_neural_net() {
-    printf("\nTraining...\n");
-    int rank,size;
-    MPI_Comm_size(MPI_COMM_WORLD, &size);
-    MPI_Comm_rank(MPI_COMM_WORLD,&rank);
+    if (rank==0) printf("\nTraining...\n");
 
     if ((input = loadPatternSet(num_training_patterns, dataset_training_path,
                                 1)) == NULL) {
@@ -122,7 +121,15 @@ void train_neural_net() {
             update_weights();
         }
 
-        printf("Epoch %d Loss: %f\n", it, loss/num_training_patterns);
+        float global_loss = 0;
+
+        MPI_Reduce(&loss, &global_loss, 1, MPI_FLOAT,
+                MPI_SUM, 0, MPI_COMM_WORLD);
+
+        if (rank == 0) {
+            printf("Epoch %d Loss: %f\n",
+                it, global_loss/num_training_patterns);
+        }
         if (debug == 1) getchar();
     }
     freeInput(num_training_patterns, input);
@@ -132,7 +139,7 @@ void train_neural_net() {
 void test_nn() {
     char** rSet;
 
-    printf("\nTesting...\n");
+    if (rank == 0) printf("\nTesting...\n");
 
     if ((rSet = loadPatternSet(num_test_patterns, dataset_test_path, 0)) ==
         NULL) {
@@ -148,7 +155,7 @@ void test_nn() {
         printRecognized(i, lay[num_layers - 1]);
     }
 
-    printf("\nTotal encerts = %d (/%d) \n", total, num_test_patterns);
+    if (rank == 0) printf("\nTotal encerts = %d (/%d) \n", total, num_test_patterns);
     freeInput(num_test_patterns, rSet);
 }
 
@@ -156,6 +163,10 @@ void test_nn() {
 int main(int argc, char** argv) {
     //omp_set_max_active_levels(2);
     MPI_Init(&argc, &argv);
+    
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    MPI_Comm_rank(MPI_COMM_WORLD,&rank);
+    
     if (debug == 1)
         printf("argc = %d \n", argc);
     if (argc <= 1)
@@ -183,12 +194,13 @@ int main(int argc, char** argv) {
     test_nn();
 
     // Stop measuring time and calculate the elapsed time
+    MPI_Barrier(MPI_COMM_WORLD);
     double elapsed = elapsedT(begin);
 
     if (dinit() != SUCCESS_DINIT)
         printf("Error in Dinitialization...\n");
 
-    printf("\n\nGoodbye! (%f sec)\n\n", elapsed);
+    if (rank == 0) printf("\n\nGoodbye! (%f sec)\n\n", elapsed);
 
     MPI_Finalize();
     return 0;

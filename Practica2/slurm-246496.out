@@ -1,0 +1,678 @@
+--------------
+1 procesos
+--------------
+
+Training...
+Epoch 0 Loss: 0.363908
+Epoch 1 Loss: 0.357409
+Epoch 2 Loss: 0.147380
+Epoch 3 Loss: 0.061898
+Epoch 4 Loss: 0.039837
+Epoch 5 Loss: 0.026030
+Epoch 6 Loss: 0.022047
+Epoch 7 Loss: 0.016594
+Epoch 8 Loss: 0.012993
+Epoch 9 Loss: 0.011011
+
+Testing...
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (11.836326 sec)
+
+--------------
+2 procesos
+--------------
+
+Training...
+
+Training...
+Epoch 0 Loss: 0.180941
+Epoch 0 Loss: 0.183082
+Epoch 1 Loss: 0.154648
+Epoch 1 Loss: 0.152393
+Epoch 2 Loss: 0.077451
+Epoch 2 Loss: 0.071897
+Epoch 3 Loss: 0.035338
+Epoch 3 Loss: 0.035008
+Epoch 4 Loss: 0.023085
+Epoch 4 Loss: 0.022081
+Epoch 5 Loss: 0.013013
+Epoch 5 Loss: 0.013726
+Epoch 6 Loss: 0.011103
+Epoch 6 Loss: 0.010694
+Epoch 7 Loss: 0.008085
+Epoch 7 Loss: 0.008269
+Epoch 8 Loss: 0.006847
+Epoch 8 Loss: 0.005734
+Epoch 9 Loss: 0.005224
+
+Testing...
+Epoch 9 Loss: 0.005735
+
+Testing...
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (6.361046 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (6.371138 sec)
+
+--------------
+4 procesos
+--------------
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+Epoch 0 Loss: 0.085094
+Epoch 0 Loss: 0.105091
+Epoch 0 Loss: 0.088547
+Epoch 0 Loss: 0.085280
+Epoch 1 Loss: 0.082686
+Epoch 1 Loss: 0.074815
+Epoch 1 Loss: 0.073051
+Epoch 1 Loss: 0.071533
+Epoch 2 Loss: 0.041424
+Epoch 2 Loss: 0.041783
+Epoch 2 Loss: 0.038711
+Epoch 2 Loss: 0.034692
+Epoch 3 Loss: 0.015199
+Epoch 3 Loss: 0.014728
+Epoch 3 Loss: 0.017475
+Epoch 3 Loss: 0.015314
+Epoch 4 Loss: 0.011282
+Epoch 4 Loss: 0.009262
+Epoch 4 Loss: 0.010437
+Epoch 4 Loss: 0.010595
+Epoch 5 Loss: 0.006936
+Epoch 5 Loss: 0.005988
+Epoch 5 Loss: 0.006226
+Epoch 5 Loss: 0.007206
+Epoch 6 Loss: 0.005118
+Epoch 6 Loss: 0.006695
+Epoch 6 Loss: 0.005092
+Epoch 6 Loss: 0.005690
+Epoch 7 Loss: 0.004379
+Epoch 7 Loss: 0.004180
+Epoch 7 Loss: 0.004030
+Epoch 7 Loss: 0.004070
+Epoch 8 Loss: 0.002336
+Epoch 8 Loss: 0.003980
+Epoch 8 Loss: 0.003099
+Epoch 8 Loss: 0.002988
+Epoch 9 Loss: 0.002909
+
+Testing...
+Epoch 9 Loss: 0.002955
+
+Testing...
+Epoch 9 Loss: 0.002542
+
+Testing...
+Epoch 9 Loss: 0.002320
+
+Testing...
+
+Total encerts = 929 (/946) 
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (4.120412 sec)
+
+
+
+Goodbye! (4.105858 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (4.129060 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (4.130553 sec)
+
+--------------
+6 procesos
+--------------
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+Epoch 0 Loss: 0.060364
+Epoch 0 Loss: 0.075023
+Epoch 0 Loss: 0.056347
+Epoch 0 Loss: 0.057232
+Epoch 0 Loss: 0.056163
+Epoch 0 Loss: 0.058753
+Epoch 1 Loss: 0.057704
+Epoch 1 Loss: 0.055668
+Epoch 1 Loss: 0.058992
+Epoch 1 Loss: 0.056113
+Epoch 1 Loss: 0.068710
+Epoch 1 Loss: 0.056823
+Epoch 2 Loss: 0.031999
+Epoch 2 Loss: 0.032020
+Epoch 2 Loss: 0.025838
+Epoch 2 Loss: 0.023116
+Epoch 2 Loss: 0.026678
+Epoch 2 Loss: 0.025225
+Epoch 3 Loss: 0.009415
+Epoch 3 Loss: 0.011362
+Epoch 3 Loss: 0.010329
+Epoch 3 Loss: 0.011705
+Epoch 3 Loss: 0.008033
+Epoch 3 Loss: 0.010758
+Epoch 4 Loss: 0.006808
+Epoch 4 Loss: 0.005820
+Epoch 4 Loss: 0.008278
+Epoch 4 Loss: 0.007178
+Epoch 4 Loss: 0.007024
+Epoch 4 Loss: 0.007280
+Epoch 5 Loss: 0.004357
+Epoch 5 Loss: 0.004964
+Epoch 5 Loss: 0.005265
+Epoch 5 Loss: 0.003446
+Epoch 5 Loss: 0.004330
+Epoch 5 Loss: 0.003869
+Epoch 6 Loss: 0.003651
+Epoch 6 Loss: 0.004767
+Epoch 6 Loss: 0.003433
+Epoch 6 Loss: 0.003457
+Epoch 6 Loss: 0.003751
+Epoch 6 Loss: 0.003734
+Epoch 7 Loss: 0.003145
+Epoch 7 Loss: 0.002791
+Epoch 7 Loss: 0.003049
+Epoch 7 Loss: 0.002928
+Epoch 7 Loss: 0.001855
+Epoch 7 Loss: 0.002813
+Epoch 8 Loss: 0.001842
+Epoch 8 Loss: 0.001871
+Epoch 8 Loss: 0.002251
+Epoch 8 Loss: 0.002579
+Epoch 8 Loss: 0.002907
+Epoch 8 Loss: 0.001834
+Epoch 9 Loss: 0.001966
+Epoch 9 Loss: 0.001989
+Epoch 9 Loss: 0.001843
+Epoch 9 Loss: 0.001500
+Epoch 9 Loss: 0.002156
+Epoch 9 Loss: 0.001654
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.685176 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.683728 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.704479 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.712262 sec)
+
+
+Total encerts = 928 (/946) 
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.713016 sec)
+
+
+
+Goodbye! (3.698133 sec)
+
+--------------
+8 procesos
+--------------
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+Epoch 0 Loss: 0.042718
+Epoch 0 Loss: 0.045893
+Epoch 0 Loss: 0.045826
+Epoch 0 Loss: 0.042075
+Epoch 0 Loss: 0.043017
+Epoch 0 Loss: 0.042689
+Epoch 0 Loss: 0.059195
+Epoch 0 Loss: 0.042590
+Epoch 1 Loss: 0.034823
+Epoch 1 Loss: 0.035466
+Epoch 1 Loss: 0.037688
+Epoch 1 Loss: 0.037694
+Epoch 1 Loss: 0.036253
+Epoch 1 Loss: 0.048189
+Epoch 1 Loss: 0.037648
+Epoch 1 Loss: 0.036960
+Epoch 2 Loss: 0.016559
+Epoch 2 Loss: 0.014375
+Epoch 2 Loss: 0.017367
+Epoch 2 Loss: 0.019322
+Epoch 2 Loss: 0.021468
+Epoch 2 Loss: 0.015618
+Epoch 2 Loss: 0.018267
+Epoch 2 Loss: 0.015541
+Epoch 3 Loss: 0.011525
+Epoch 3 Loss: 0.010588
+Epoch 3 Loss: 0.012413
+Epoch 3 Loss: 0.009542
+Epoch 3 Loss: 0.010758
+Epoch 3 Loss: 0.010862
+Epoch 3 Loss: 0.008712
+Epoch 3 Loss: 0.012366
+Epoch 4 Loss: 0.005154
+Epoch 4 Loss: 0.006133
+Epoch 4 Loss: 0.006111
+Epoch 4 Loss: 0.005347
+Epoch 4 Loss: 0.005064
+Epoch 4 Loss: 0.005358
+Epoch 4 Loss: 0.008210
+Epoch 4 Loss: 0.005237
+Epoch 5 Loss: 0.003471
+Epoch 5 Loss: 0.003246
+Epoch 5 Loss: 0.004303
+Epoch 5 Loss: 0.003177
+Epoch 5 Loss: 0.003824
+Epoch 5 Loss: 0.003691
+Epoch 5 Loss: 0.003147
+Epoch 5 Loss: 0.003189
+Epoch 6 Loss: 0.002989
+Epoch 6 Loss: 0.003003
+Epoch 6 Loss: 0.003044
+Epoch 6 Loss: 0.003934
+Epoch 6 Loss: 0.002709
+Epoch 6 Loss: 0.002351
+Epoch 6 Loss: 0.003041
+Epoch 6 Loss: 0.002197
+Epoch 7 Loss: 0.001998
+Epoch 7 Loss: 0.002503
+Epoch 7 Loss: 0.001830
+Epoch 7 Loss: 0.002272
+Epoch 7 Loss: 0.002407
+Epoch 7 Loss: 0.002146
+Epoch 7 Loss: 0.002038
+Epoch 7 Loss: 0.001438
+Epoch 8 Loss: 0.001725
+Epoch 8 Loss: 0.002468
+Epoch 8 Loss: 0.001578
+Epoch 8 Loss: 0.001241
+Epoch 8 Loss: 0.001445
+Epoch 8 Loss: 0.001158
+Epoch 8 Loss: 0.001444
+Epoch 8 Loss: 0.001482
+Epoch 9 Loss: 0.001466
+
+Testing...
+Epoch 9 Loss: 0.001304
+
+Testing...
+Epoch 9 Loss: 0.001321
+
+Testing...
+Epoch 9 Loss: 0.001586
+
+Testing...
+Epoch 9 Loss: 0.001058
+
+Testing...
+Epoch 9 Loss: 0.001081
+
+Testing...
+Epoch 9 Loss: 0.001273
+
+Testing...
+Epoch 9 Loss: 0.001662
+
+Testing...
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (2.982694 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (2.983231 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (2.976690 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (2.976472 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (2.978383 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (2.977730 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (2.996088 sec)
+
+
+Total encerts = 929 (/946) 
+
+
+Goodbye! (3.000518 sec)
+
+--------------
+12 procesos
+--------------
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+
+Training...
+Epoch 0 Loss: 0.030990
+Epoch 0 Loss: 0.028717
+Epoch 0 Loss: 0.027390
+Epoch 0 Loss: 0.028142
+Epoch 0 Loss: 0.029095
+Epoch 0 Loss: 0.028776
+Epoch 0 Loss: 0.030040
+Epoch 0 Loss: 0.029379
+Epoch 0 Loss: 0.030465
+Epoch 0 Loss: 0.028388
+Epoch 0 Loss: 0.044564
+Epoch 0 Loss: 0.027963
+Epoch 1 Loss: 0.027632
+Epoch 1 Loss: 0.028705
+Epoch 1 Loss: 0.029003
+Epoch 1 Loss: 0.041460
+Epoch 1 Loss: 0.027799
+Epoch 1 Loss: 0.030057
+Epoch 1 Loss: 0.028846
+Epoch 1 Loss: 0.027369
+Epoch 1 Loss: 0.029646
+Epoch 1 Loss: 0.028426
+Epoch 1 Loss: 0.028093
+Epoch 1 Loss: 0.029142
+Epoch 2 Loss: 0.012508
+Epoch 2 Loss: 0.012971
+Epoch 2 Loss: 0.012947
+Epoch 2 Loss: 0.013651
+Epoch 2 Loss: 0.015890
+Epoch 2 Loss: 0.013204
+Epoch 2 Loss: 0.011159
+Epoch 2 Loss: 0.012523
+Epoch 2 Loss: 0.013645
+Epoch 2 Loss: 0.014858
+Epoch 2 Loss: 0.019132
+Epoch 2 Loss: 0.012183
+Epoch 3 Loss: 0.005258
+Epoch 3 Loss: 0.005925
+Epoch 3 Loss: 0.005517
+Epoch 3 Loss: 0.004562
+Epoch 3 Loss: 0.005044
+Epoch 3 Loss: 0.004273
+Epoch 3 Loss: 0.008147
+Epoch 3 Loss: 0.005897
+Epoch 3 Loss: 0.005835
+Epoch 3 Loss: 0.003838
+Epoch 3 Loss: 0.005867
+Epoch 3 Loss: 0.004775
+Epoch 4 Loss: 0.003235
+Epoch 4 Loss: 0.003567
+Epoch 4 Loss: 0.003737
+Epoch 4 Loss: 0.003145
+Epoch 4 Loss: 0.005855
+Epoch 4 Loss: 0.003299
+Epoch 4 Loss: 0.003451
+Epoch 4 Loss: 0.003462
+Epoch 4 Loss: 0.003833
+Epoch 4 Loss: 0.002386
+Epoch 4 Loss: 0.003322
+Epoch 4 Loss: 0.002658
+Epoch 5 Loss: 0.002496
+Epoch 5 Loss: 0.002785
+Epoch 5 Loss: 0.002858
+Epoch 5 Loss: 0.002303
+Epoch 5 Loss: 0.001981
+Epoch 5 Loss: 0.002067
+Epoch 5 Loss: 0.001989
+Epoch 5 Loss: 0.002537
+Epoch 5 Loss: 0.001544
+Epoch 5 Loss: 0.001647
+Epoch 5 Loss: 0.002005
+Epoch 5 Loss: 0.001888
+Epoch 6 Loss: 0.001999
+Epoch 6 Loss: 0.001883
+Epoch 6 Loss: 0.001942
+Epoch 6 Loss: 0.002656
+Epoch 6 Loss: 0.001489
+Epoch 6 Loss: 0.001745
+Epoch 6 Loss: 0.001430
+Epoch 6 Loss: 0.002027
+Epoch 6 Loss: 0.001567
+Epoch 6 Loss: 0.001718
+Epoch 6 Loss: 0.001944
+Epoch 6 Loss: 0.001552
+Epoch 7 Loss: 0.001487
+Epoch 7 Loss: 0.001493
+Epoch 7 Loss: 0.000830
+Epoch 7 Loss: 0.001766
+Epoch 7 Loss: 0.001246
+Epoch 7 Loss: 0.001257
+Epoch 7 Loss: 0.001013
+Epoch 7 Loss: 0.001889
+Epoch 7 Loss: 0.001818
+Epoch 7 Loss: 0.001407
+Epoch 7 Loss: 0.001357
+Epoch 7 Loss: 0.001366
+Epoch 8 Loss: 0.001697
+Epoch 8 Loss: 0.001859
+Epoch 8 Loss: 0.001396
+Epoch 8 Loss: 0.000803
+Epoch 8 Loss: 0.001150
+Epoch 8 Loss: 0.001191
+Epoch 8 Loss: 0.000698
+Epoch 8 Loss: 0.000786
+Epoch 8 Loss: 0.001018
+Epoch 8 Loss: 0.000647
+Epoch 8 Loss: 0.000865
+Epoch 8 Loss: 0.001135
+Epoch 9 Loss: 0.000906
+Epoch 9 Loss: 0.000890
+Epoch 9 Loss: 0.000892
+Epoch 9 Loss: 0.001100
+Epoch 9 Loss: 0.001225
+Epoch 9 Loss: 0.000680
+Epoch 9 Loss: 0.000988
+Epoch 9 Loss: 0.000810
+Epoch 9 Loss: 0.001121
+Epoch 9 Loss: 0.000643
+Epoch 9 Loss: 0.001016
+Epoch 9 Loss: 0.000912
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Testing...
+
+Total encerts = 928 (/946) 
+
+Total encerts = 928 (/946) 
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.374803 sec)
+
+
+
+Goodbye! (3.375004 sec)
+
+
+
+Goodbye! (3.375113 sec)
+
+
+Total encerts = 928 (/946) 
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.376217 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.359281 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.375512 sec)
+
+
+
+Goodbye! (3.376239 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.376315 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.369655 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.369588 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.374519 sec)
+
+
+Total encerts = 928 (/946) 
+
+
+Goodbye! (3.397633 sec)
+
